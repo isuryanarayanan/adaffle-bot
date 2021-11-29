@@ -3,7 +3,7 @@ const { SlashCommandBuilder } = require("@discordjs/builders");
 const { MessageEmbed } = require("discord.js");
 /* Imports */
 function randomInteger(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+  return Math.random() * (max - min + 1) + min;
 }
 /* Main */
 module.exports = {
@@ -35,7 +35,7 @@ module.exports = {
           " and " +
           maximum +
           " : " +
-          randomInteger(minimum, maximum)
+				randomInteger(minimum, maximum).toFixed(5)
       );
     }
   },
